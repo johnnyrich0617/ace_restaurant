@@ -32,7 +32,12 @@ public class MainActivity extends AppCompatActivity {
         ListView listView = (ListView) findViewById(R.id.menu_list_view);
         listView.setAdapter(miAdapter);
 
-        //add a click adapter
+        /*
+          Set the onClickListener on the entire list
+          we will use Intent someIntent = new Intent(MainActivity.this, SomeMenuAction.class);
+                                  startActivity(someIntent);
+          to create and start the correct activity
+         */
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
@@ -50,33 +55,21 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 3:
                         Toast.makeText(getApplicationContext(),"Mix A Beverage",Toast.LENGTH_SHORT).show();
-                        //Intent pastry = new Intent(MainActivity.this, Pastry.class);
-                        //startActivity(pastry);
                         break;
                     case 4:
                         Toast.makeText(getApplicationContext(),"Counting Calories",Toast.LENGTH_SHORT).show();
-                        //Intent pastry = new Intent(MainActivity.this, Pastry.class);
-                        //startActivity(pastry);
                         break;
                     case 5:
                         Toast.makeText(getApplicationContext(),"We Do Cater Too",Toast.LENGTH_SHORT).show();
-                        //Intent pastry = new Intent(MainActivity.this, Pastry.class);
-                        //startActivity(pastry);
                         break;
                     case 6:
                         Toast.makeText(getApplicationContext(),"Get Directions",Toast.LENGTH_SHORT).show();
-                        //Intent pastry = new Intent(MainActivity.this, Pastry.class);
-                        //startActivity(pastry);
                         break;
                     case 7:
                         Toast.makeText(getApplicationContext(),"Who Are We",Toast.LENGTH_SHORT).show();
-                        //Intent pastry = new Intent(MainActivity.this, Pastry.class);
-                        //startActivity(pastry);
                         break;
                     case 8:
                         Toast.makeText(getApplicationContext(),"Logging Out",Toast.LENGTH_SHORT).show();
-                        //Intent pastry = new Intent(MainActivity.this, Pastry.class);
-                        //startActivity(pastry);
                         break;
                 }
             }
@@ -84,6 +77,12 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * Get the correct menuItemIcon that
+     * corresponds to the menuItemText
+     * @param menuItem The menuItemText for this menu item
+     * @return Return the resource ID for the corresponding icon as integer (int)
+     */
     private int getMenuIcon(String menuItem) {
 
         if(menuItem.contains("View")){

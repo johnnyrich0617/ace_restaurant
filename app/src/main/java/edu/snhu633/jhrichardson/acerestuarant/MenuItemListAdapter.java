@@ -52,20 +52,19 @@ public class MenuItemListAdapter extends ArrayAdapter<MainMenuItem>{
 
         // Find the ImageView in the list_item.xml layout with the ID list_item_icon
         ImageView menuIconView = (ImageView) listItemView.findViewById(R.id.menu_item_icon);
-        // Get the image resource ID from the current Dessert object and
-        // set the image to iconView
 
+        // set the image to iconView
         menuIconView.setImageResource(currentMenuItem.getMenuItemResourceId());
 
         // Find the TextView in the list_item.xml layout with the ID version_name
         TextView nameTextView = (TextView) listItemView.findViewById(R.id.menu_item_name);
-        // Get the version name from the current Dessert object and
-        // set this text on the name TextView
+
+        //set the Menu Item Name
         nameTextView.setText(currentMenuItem.getMenuItemText());
 
         // Find the ImageView in the list_item.xml layout with the ID list_item_icon
         ImageView actionIconView = (ImageView) listItemView.findViewById(R.id.list_item_action_icon);
-        // Get the image resource ID from the current Dessert object and
+
         // set the image to iconView
         actionIconView.setImageResource(currentMenuItem.getMenuActionResourceId());
 

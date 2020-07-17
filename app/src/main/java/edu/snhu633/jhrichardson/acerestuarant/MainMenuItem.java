@@ -2,7 +2,8 @@ package edu.snhu633.jhrichardson.acerestuarant;
 
 /**
  * {@link MainMenuItem} represents a single menu item.
- * Each object has 3 properties: menu item resource id, menu item text, and menu action resource ID.
+ * Each object has 3 properties: menu item icon resource id, menu item text,
+ * and menu action icon resource ID.
  */
 
 public class MainMenuItem {

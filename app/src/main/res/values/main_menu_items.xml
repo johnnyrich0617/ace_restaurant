@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="main_menu_items">
+        <item>View Our Menu</item>
+        <item>Mobile Order</item>
+        <item>Make a Reservation</item>
+        <item>The Beverage Mixer</item>
+        <item>Count Your Calories</item>
+        <item>We Cater Too</item>
+        <item>Get Our Directions</item>
+        <item>Who We Are</item>
+        <item>Log Out</item>
+    </string-array>
+</resources>

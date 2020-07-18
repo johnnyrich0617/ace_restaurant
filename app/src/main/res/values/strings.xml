@@ -3,4 +3,7 @@
     <string name="ace_image">Ace Restaurant</string>
     <string name="menu_item_icon">menu_item_icon</string>
     <string name="menu_action_icon">menu_action_icon</string>
+    <string name="title_activity_directions">Ace Restaurant Directions</string>
+    <string name="error_text_no_google_services">Unable to Connect to Google Play Services</string>
+    <string name="error_latlong_parse_exception">Error getting map location from Resource</string>
 </resources>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- CONSTANTS FOR ACCESS -->
+    <string name="const_lat_key">DIR_LAT_KEY</string>
+    <string name="const_long_key">DIR_LANG_KEY</string>
+    <!-- Main Ace Restaurant Location -->
+    <string name="main_location_lat">38.292919</string>
+    <string name="main_location_long">-76.502502</string>
+</resources>

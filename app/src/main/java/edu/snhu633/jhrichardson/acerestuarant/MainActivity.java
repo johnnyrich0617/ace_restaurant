@@ -2,11 +2,16 @@ package edu.snhu633.jhrichardson.acerestuarant;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Dialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
+
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.GoogleApiAvailability;
 
 import java.util.ArrayList;
 
@@ -41,8 +46,6 @@ public class MainActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-
-                //Dessert dessert = desserts.get(i);
                 switch(i) {
                     case 0:
                         Toast.makeText(getApplicationContext(),"Our Menu",Toast.LENGTH_SHORT).show();
@@ -63,7 +66,22 @@ public class MainActivity extends AppCompatActivity {
                         Toast.makeText(getApplicationContext(),"We Do Cater Too",Toast.LENGTH_SHORT).show();
                         break;
                     case 6:
-                        Toast.makeText(getApplicationContext(),"Get Directions",Toast.LENGTH_SHORT).show();
+                        if(googleServicesAvailable()) {
+                            try {
+                                double restLat = Double.parseDouble(getResources().getString(R.string.main_location_lat));
+                                double restLong = Double.parseDouble(getResources().getString(R.string.main_location_long));
+                                Intent mapIntent = new Intent(MainActivity.this, DirectionsActivity.class);
+                                mapIntent.putExtra(getResources().getString(R.string.const_lat_key), restLat);
+                                mapIntent.putExtra(getResources().getString(R.string.const_long_key), restLong);
+                                startActivity(mapIntent);
+                            }
+                            catch (NumberFormatException nfe){
+                                Toast.makeText(getApplicationContext(),
+                                        getResources().getString(R.string.error_latlong_parse_exception),
+                                        Toast.LENGTH_LONG).show();
+                                nfe.printStackTrace();
+                            }
+                        }
                         break;
                     case 7:
                         Toast.makeText(getApplicationContext(),"Who Are We",Toast.LENGTH_SHORT).show();
@@ -75,6 +93,28 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    /**
+     * Check to see if Google Play Services are installed and available
+     * @return true if available
+     */
+    private boolean googleServicesAvailable() {
+        GoogleApiAvailability api = GoogleApiAvailability.getInstance();
+        int isAvailable = api.isGooglePlayServicesAvailable(this);
+        if(isAvailable == ConnectionResult.SUCCESS){
+            return true;
+        }
+        else if(api.isUserResolvableError(isAvailable)) {
+            Dialog dialog = api.getErrorDialog(this, isAvailable,0);
+            dialog.show();
+        }
+        else {
+            Toast.makeText(this,
+                    R.string.error_text_no_google_services,
+                    Toast.LENGTH_LONG).show();
+        }
+        return false;
     }
 
     /**

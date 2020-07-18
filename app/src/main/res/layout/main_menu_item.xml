@@ -18,26 +18,26 @@
 
     <ImageView
         android:id="@+id/menu_item_icon"
-        android:layout_width="53dp"
-        android:layout_height="50dp"
+        android:layout_width="21dp"
+        android:layout_height="23dp"
         android:contentDescription="@string/menu_item_icon" />
 
     <TextView
         android:id="@+id/menu_item_name"
         android:layout_width="0dp"
-        android:layout_height="36dp"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_weight="1"
         android:fontFamily="@font/aref_ruqaa_bold"
         android:textColor="#0B0B0B"
-        android:textSize="18sp"
+        android:textSize="14sp"
         android:textStyle="bold" />
 
     <ImageView
         android:id="@+id/list_item_action_icon"
-        android:layout_width="36dp"
-        android:layout_height="34dp"
+        android:layout_width="21dp"
+        android:layout_height="21dp"
         android:contentDescription="@string/menu_action_icon" />
 
 </LinearLayout>

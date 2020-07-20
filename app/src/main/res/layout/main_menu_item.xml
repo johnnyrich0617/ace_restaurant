@@ -9,7 +9,7 @@
     android:layout_marginStart="10dp"
     android:layout_marginTop="10dp"
     android:layout_marginEnd="10dp"
-    android:background="#EBC4DC"
+    android:background="@drawable/custom_rec_boarder"
     android:clickable="false"
     android:gravity="center_vertical"
     android:minHeight="?android:attr/listPreferredItemHeight"
@@ -18,20 +18,20 @@
 
     <ImageView
         android:id="@+id/menu_item_icon"
-        android:layout_width="21dp"
-        android:layout_height="23dp"
+        android:layout_width="32dp"
+        android:layout_height="29dp"
         android:contentDescription="@string/menu_item_icon" />
 
     <TextView
         android:id="@+id/menu_item_name"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="32dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_weight="1"
-        android:fontFamily="@font/aref_ruqaa_bold"
+        android:fontFamily="@font/archivo_narrow_bold"
         android:textColor="#0B0B0B"
-        android:textSize="14sp"
+        android:textSize="18sp"
         android:textStyle="bold" />
 
     <ImageView

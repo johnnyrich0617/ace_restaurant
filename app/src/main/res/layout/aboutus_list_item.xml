@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="10dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginEnd="10dp"
+    android:background="@drawable/custom_rec_boarder"
+    android:clickable="false"
+    android:gravity="center_vertical"
+    android:minHeight="?android:attr/listPreferredItemHeight"
+    android:padding="16dp">
+
+
+    <TextView
+        android:id="@+id/employee_title"
+        android:layout_width="392dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="10dp"
+        android:layout_weight="1"
+        android:fontFamily="@font/archivo_narrow_bold"
+        android:textColor="#040404"
+        android:textSize="18sp" />
+
+    <ImageView
+        android:id="@+id/employee_image"
+        android:layout_width="199dp"
+        android:layout_height="58dp"
+        android:layout_weight="1"
+        android:contentDescription="@string/about_us_employee_image" />
+
+</LinearLayout>

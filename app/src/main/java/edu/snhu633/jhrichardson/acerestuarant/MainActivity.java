@@ -84,7 +84,8 @@ public class MainActivity extends AppCompatActivity {
                         }
                         break;
                     case 7:
-                        Toast.makeText(getApplicationContext(),"Who Are We",Toast.LENGTH_SHORT).show();
+                        Intent aboutUsIntent = new Intent(MainActivity.this, AboutUsActivity.class);
+                        startActivity(aboutUsIntent);
                         break;
                     case 8:
                         Toast.makeText(getApplicationContext(),"Logging Out",Toast.LENGTH_SHORT).show();

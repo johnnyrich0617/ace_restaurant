@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="aboutus_title">Ace Restaurant\nWho We Are</string>
+    <string name="aboutus_paragraph">
+        Here at Ace Restaurant you\, our customers\, always come first! We were originally established by
+        Ace Morgan in 1995.  Ace ran his establishment with only one goal in mind\, put smiles on peoples faces!  He did
+        this producing meals so tasty that his customers continued to return\, with SMILES!  Today\, we
+        continue with Ace\'s goal and continue to mix great food with good times!
+    </string>
+
+    <string name="aboutus_employees_label">Our Notables, Folks you\'d like to know!</string>
+
+    <string-array name="aboutus_list_item_tags">
+        <item>Your General Manager</item>
+        <item>Your Lead Asst. Manager</item>
+        <item>Your Head Chef</item>
+        <item>Your Hostess</item>
+        <item>Mixologist of the Month</item>
+        <item>Employee of the Month</item>
+    </string-array>
+
+    <string-array name="aboutus_list_item_bluffs">
+        <item>Michele Franklin comes to us from …</item>
+        <item>James (Jimmy) Mono has been with us …</item>
+        <item>Chef Patty Boyle has been with us since …</item>
+        <item>Rachele Gilmore\'s talents for organization …</item>
+        <item>Beverage? Any Beverage, Paul Jackson can …</item>
+        <item>Alison Parks\, is a student of the law, graduated from …</item>
+    </string-array>
+
+    <string name="about_us_employee_image">employee_image</string>
+
+</resources>

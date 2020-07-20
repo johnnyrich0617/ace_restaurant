@@ -17,6 +17,10 @@ public class DirectionsActivity extends FragmentActivity implements OnMapReadyCa
     private double restaurant_lat;
     private double restaurant_long;
 
+    /**
+     * Create an instance of a @SupportMapFragment and fetch the map asynchronously
+     * @param savedInstanceState the saved state of the calling instance as a Bundle
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,19 +37,18 @@ public class DirectionsActivity extends FragmentActivity implements OnMapReadyCa
     /**
      * Manipulates the map once available.
      * This callback is triggered when the map is ready to be used.
-     * This is where we can add markers or lines, add listeners or move the camera. In this case,
-     * we just add a marker near Sydney, Australia.
-     * If Google Play services is not installed on the device, the user will be prompted to install
-     * it inside the SupportMapFragment. This method will only be triggered once the user has
-     * installed Google Play services and returned to the app.
+     * This is where we can add markers or lines, add listeners or move the camera.
      */
     @Override
     public void onMapReady(GoogleMap googleMap) {
+        //Set the created map
         mMap = googleMap;
-        // Add a marker to restaurant and focus the camera
+        // Add a marker to the restaurant
         LatLng ace = new LatLng(this.restaurant_lat, this.restaurant_long);
         mMap.addMarker(new MarkerOptions().position(ace)
                 .title(getResources().getString(R.string.title_activity_directions)));
+        //Set the camera to the maker and zoom to street level
         mMap.moveCamera(CameraUpdateFactory.newLatLng(ace));
+        mMap.moveCamera(CameraUpdateFactory.zoomTo(15.0f));
     }
 }
